@@ -2,28 +2,20 @@ require_relative '../models/task'
 
 class Todo
 
-	def list
+	def self.list
 		Task.list
-
 	end
 
-	def add(description)
-		# Task.create({description: description, completed: 0 })
+	def self.add(description)
 		Task.add(description)
-
 	end
 
-	def delete(id)
+	def self.delete(id)
 		Task.delete(id)
-
 	end
 
-	def complete(id)
+	def self.complete(id)
 		Task.complete(id)
 	end
-
-
-
-
 
 end
