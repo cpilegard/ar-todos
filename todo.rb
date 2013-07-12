@@ -1,3 +1,18 @@
 require_relative 'config/application'
+require_relative 'app/controllers/todo_controller'
 
-puts "Put your application code in #{File.expand_path(__FILE__)}"
+
+if ARGV[0] == 'list'
+	p	Controller.list
+
+elsif ARGV[0] == "add"
+	p	Controller.add(ARGV[1])
+
+elsif ARGV[0] == 'delete'
+	p	Controller.delete(ARGV[1])
+
+elsif ARGV[0] == 'complete'
+	p Controller.complete(ARGV[1])
+
+end
+
