@@ -3,16 +3,16 @@ require_relative 'app/controllers/todo_controller'
 
 
 if ARGV[0] == 'list'
-	p	Controller.list
+	p	Todo.list
 
 elsif ARGV[0] == "add"
-	p	Controller.add(ARGV[1])
+	p	Todo.add(ARGV[1])
 
 elsif ARGV[0] == 'delete'
-	p	Controller.delete(ARGV[1])
+	p	Todo.delete(ARGV[1])
 
 elsif ARGV[0] == 'complete'
-	p Controller.complete(ARGV[1])
+	p Todo.complete(ARGV[1])
 
 end
 
